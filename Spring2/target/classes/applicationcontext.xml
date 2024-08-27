@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+	<bean id="test1" class="com.wipro.Spring2.Test">
+		<property name="testId" value="T001"></property>
+		<property name="testName" value="core java"></property>
+		<property name="testMarks" value="80"></property>
+	</bean>
+	<bean id="test2" class="com.wipro.Spring2.Test">
+		<property name="testId" value="T002"></property>
+		<property name="testName" value="oracle"></property>
+		<property name="testMarks" value="83"></property>
+	</bean>
+	<bean id="student1" class="com.wipro.Spring2.Student">
+		<property name="studentId" value="S001"></property>
+		<property name="studentName" value="steve"></property>
+		<property name="studentTest" ref="test1"></property>
+	</bean>
+	<bean id="student2" class="com.wipro.Spring2.Student">
+		<property name="studentId" value="S002"></property>
+		<property name="studentName" value="robert"></property>
+		<property name="studentTest" ref="test2"></property>
+	</bean>
+</beans>  

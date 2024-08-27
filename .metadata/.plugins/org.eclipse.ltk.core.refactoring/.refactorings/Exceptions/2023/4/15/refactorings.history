@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.wipro.MyCustomeException&apos; to &apos;InvalidMarks&apos;&#x0D;&#x0A;- Original project: &apos;Exceptions&apos;&#x0D;&#x0A;- Original element: &apos;com.wipro.MyCustomeException&apos;&#x0D;&#x0A;- Renamed element: &apos;com.wipro.InvalidMarks&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MyCustomeException&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.wipro{MyCustomeException.java[MyCustomeException" matchStrategy="1" name="InvalidMarks" qualified="false" references="true" similarDeclarations="false" stamp="1681117580316" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="country1" class="com.wipro.Spring2.Country">
+		<property name="countryId" value="C001"></property>
+		<property name="countryName" value="india"></property>
+	</bean>
+	<bean id="country2" class="com.wipro.Spring2.Country">
+		<property name="countryId" value="C002"></property>
+		<property name="countryName" value="us"></property>
+	</bean>
+	<bean id="player1" class="com.wipro.Spring2.Player">
+		<property name="playerId" value="P001"></property>
+		<property name="playerName" value="sumanth"></property>
+		<property name="country" ref="country1"></property>
+	</bean>
+	<bean id="player2" class="com.wipro.Spring2.Player">
+		<property name="playerId" value="P002"></property>
+		<property name="playerName" value="siraj"></property>
+		<property name="country" ref="country1"></property>
+	</bean>
+	<bean id="player3" class="com.wipro.Spring2.Player">
+		<property name="playerId" value="P003"></property>
+		<property name="playerName" value="ram"></property>
+		<property name="country" ref="country2"></property>
+	</bean>
+	<bean id="player4" class="com.wipro.Spring2.Player">
+		<property name="playerId" value="P004"></property>
+		<property name="playerName" value="ronaldo"></property>
+		<property name="country" ref="country2"></property>
+	</bean>
+	<bean id="player5" class="com.wipro.Spring2.Player">
+		<property name="playerId" value="P005"></property>
+		<property name="playerName" value="messi"></property>
+		<property name="country" ref="country2"></property>
+	</bean>
+</beans>

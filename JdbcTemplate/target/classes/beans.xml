@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	<context:component-scan base-package="com.wipro.JdbcTemplate"></context:component-scan>
+	<!--  <bean id="student" class="com.wipro.JdbcTemplate.Entity.Student">
+		<property name="rollNo" value="8"></property>
+		<property name="name" value="sampath"></property>
+		<property name="address" value="brahmanagudem"></property>
+	</bean>-->
+	<tx:annotation-driven proxy-target-class="true" transaction-manager="transactionManager"/>
+	
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/student?useSSL=false"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="Sumanth@123"></property>
+	</bean>
+	<bean id="jdbcTemplate"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg name="dataSource" ref="dataSource"></constructor-arg>
+	</bean>
+	<bean id="studenthelper" class="com.wipro.JdbcTemplate.Service.StudentHelper">
+	
+	
+	</bean>
+	<!--  
+	<bean id="test" class="com.wipro.JdbcTemplate.Service.Test">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>-->
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+		>
+		<property name="dataSource" ref="dataSource"></property>
+		
+	</bean>
+</beans>

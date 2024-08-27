@@ -1,0 +1,40 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+  <welcome-file>Employee.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>FirstServlet</servlet-name>
+  	<display-name>FirstServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.wipro.FirstServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ThreeJspDisplay</servlet-name>
+  	<display-name>ThreeJspDisplay</display-name>
+  	<description></description>
+  	<servlet-class>com.wipro.ThreeJspDisplay</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EmployeeServlet</servlet-name>
+  	<display-name>EmployeeServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.wipro.EmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>FirstServlet</servlet-name>
+  	<url-pattern>/FirstServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ThreeJspDisplay</servlet-name>
+  	<url-pattern>/ThreeJspDisplay</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EmployeeServlet</servlet-name>
+  	<url-pattern>/EmployeeServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
